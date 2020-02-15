@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aah quand le W</title>
+
+  <link rel="icon" href="favicon.png">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+  <style type="text/css">
+  body {
+    background: #fff;
+    margin: 0;
+  }
+  .hide {
+    display: none;
+  }
+  </style>
+
+</head>
+<body>
+
+  <section class="container hide" id="primaire">
+    <div class="text">
+      <p>Concentre-toi sur chaque tâche, aussi banale soit-elle.</p>
+      <p2>La satisfaction du travail bien fait contribuera à ton bonheur.</p>
+    </div>
+  </section>
+
+  <section class="container hide" id="secondaire">
+    <p>C’est le travail qui t’enseignera comment travailler.</p>
+  </section>
+
+  <section class="container hide" id="tertieraire">
+    <p>
+      L’homme qui travaille comme un esclave mange comme un roi.
+    </p>
+  </section>
+
+  <script type="text/javascript" >
+
+    (function($) {
+      $.fn.random = function() {
+          var n = this.length;
+          var r = Math.floor(n * Math.random());
+          return n ? $(this[r]) : $();
+      };
+      $('.hide').random().removeClass("hide");
+    })(jQuery);  
+    
+  </script>
+
+</body>
+</html>
